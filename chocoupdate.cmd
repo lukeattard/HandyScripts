@@ -1,3 +1,4 @@
+@echo off
 choco feature enable -n allowGlobalConfirmation
-choco outdated | for /f "delims=| tokens=1 skip=1" %%i in ('findstr "|"') DO choco update %%i
+choco outdated | for /f "delims=| tokens=1 skip=1" %%i in ('findstr "|"') DO choco upgrade %%i
 refreshenv
